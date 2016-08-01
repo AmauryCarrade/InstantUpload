@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">InstantUpload</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="services_list_empty_title">Welcome to InstantUpload</string>
+    <string name="services_list_empty_create">Get started by adding a new service using the button below.</string>
+    <string name="services_list_empty_help">Don\'t understand how this work? Tap the help button in the toolbar.</string>
+</resources>
