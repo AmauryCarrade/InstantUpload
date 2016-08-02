@@ -1,17 +1,22 @@
 package eu.carrade.amaury.instantupload.services;
 
-
-import android.graphics.drawable.Drawable;
+import android.app.Fragment;
 
 import java.io.File;
 
+
 public interface Service
 {
+    ServiceType getType();
+
     String getName();
-    Drawable getIcon();
+    boolean isPrimary();
+
+    Fragment getSettingsFragment();
 
     void openSettings();
     void saveFile(File file, ServiceCallback callback);
+
 
     interface ServiceCallback
     {

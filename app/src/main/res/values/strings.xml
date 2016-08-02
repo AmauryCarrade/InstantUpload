@@ -1,8 +1,22 @@
 <resources>
-    <string name="app_name">InstantUpload</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Instant Upload</string>
+    <string name="app_desc">Super-fast uploads to the clipboard</string>
+
+    <string name="action_help">Help</string>
+
+    <string name="activity_main_title">Instant Upload</string>
 
     <string name="services_list_empty_title">Welcome to InstantUpload</string>
     <string name="services_list_empty_create">Get started by adding a new service using the button below.</string>
     <string name="services_list_empty_help">Don\'t understand how this work? Tap the help button in the toolbar.</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="add_new_upload_service">Add new upload service</string>
+    <string name="menu_title_services">Your services</string>
+    <string name="menu_placeholder_no_service_yet">No service yet.</string>
+    <string name="services_sftp_name">SFTP</string>
+
+    <string name="activity_select_service_type">Select a service to add…</string>
+    <string name="select_service_help_text">Pick a service to add. You\'ll be able to configure it on the next screen.</string>
 </resources>

@@ -23,6 +23,12 @@ public class InstantUpload extends Application
         servicesManager.loadServices();
     }
 
+    public void handleError(Exception e)
+    {
+        // TODO nice system error handling
+        e.printStackTrace();
+    }
+
     public ServicesManager getServicesManager()
     {
         return servicesManager;
