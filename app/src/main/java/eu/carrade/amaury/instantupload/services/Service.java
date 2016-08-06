@@ -1,24 +1,67 @@
 package eu.carrade.amaury.instantupload.services;
 
-import android.app.Fragment;
+import android.os.Bundle;
 
 import java.io.File;
 
 
-public interface Service
+public abstract class Service
 {
-    ServiceType getType();
+    private Integer internalID = null;
 
-    String getName();
-    boolean isPrimary();
+    private String name;
+    private boolean isPrimary;
 
-    Fragment getSettingsFragment();
+    private Bundle parameters = new Bundle();
 
-    void openSettings();
-    void saveFile(File file, ServiceCallback callback);
+    public int getInternalID()
+    {
+        return internalID;
+    }
+
+    public void setInternalID(int internalID)
+    {
+        if (this.internalID != null)
+            throw new IllegalStateException("Cannot set the service's internal ID: already set (should only be set by the system).");
+
+        this.internalID = internalID;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public boolean isPrimary()
+    {
+        return isPrimary;
+    }
+
+    public void setPrimary(boolean primary)
+    {
+        isPrimary = primary;
+    }
+
+    public Bundle getParameters()
+    {
+        return parameters;
+    }
 
 
-    interface ServiceCallback
+    public abstract ServiceType getType();
+
+    public abstract ServiceFragment getSettingsFragment();
+
+    public abstract void openSettings();
+    public abstract void saveFile(File file, ServiceCallback callback);
+
+
+    public interface ServiceCallback
     {
         void uploaded(String url);
         void failed(Exception e);

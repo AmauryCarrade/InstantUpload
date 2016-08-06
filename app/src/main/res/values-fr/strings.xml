@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Instant Upload</string>
+    <string name="action_help">Aide</string>
+    <string name="activity_add_service">Nouveau service : %s</string>
+    <string name="activity_main_title">Instant Upload</string>
+    <string name="activity_select_service_type">Sélectionnez un service…</string>
+    <string name="add_new_upload_service">Ajouter un nouveau service</string>
+    <string name="app_desc">Téléversements éclairs vers le presse-papier</string>
+    <string name="error_service_name_taken">Ce nom est déjà utilisé</string>
+    <string name="menu_placeholder_no_service_yet">Aucun service, pour le moment</string>
+    <string name="menu_title_services">Vos services</string>
+    <string name="navigation_drawer_close">Fermer le menu latéral</string>
+    <string name="navigation_drawer_open">Ouvrir le menu latéral</string>
+    <string name="select_service_help_text">Choisissez un service à ajouter. Vous pourrez le configurer sur l\'écran suivant.</string>
+    <string name="service_add_menu_done">Terminé</string>
+    <string name="service_configuration_name">Nom du service</string>
+    <string name="service_configuration_primary_service">Service principal</string>
+    <string name="service_configuration_primary_service_help_label">Qu\'est-ce qu\'un service principal ?</string>
+    <string name="service_configuration_sftp_directory">Dossier de téléversement (absolu)</string>
+    <string name="service_configuration_sftp_filename">Format du nom du fichier</string>
+    <string name="service_configuration_sftp_filename_format_help">Entrez le nom du fichier à utiliser lors du téléversement. Laissez vide pour conserver le nom original.\nTapez l\'icône d\'aide pour découvrir les règles de formattage.</string>
+    <string name="service_configuration_sftp_name_formats_help_label">En apprendre plus à propos des formats de nommage</string>
+    <string name="service_configuration_sftp_password">Mot de passe</string>
+    <string name="service_configuration_sftp_server">Adresse du serveur</string>
+    <string name="service_configuration_sftp_server_title">Serveur SFTP</string>
+    <string name="service_configuration_sftp_url">URL publique</string>
+    <string name="service_configuration_sftp_url_help">Entrez l\'URL publique à laquelle le fichier téléversé sera accessible. Ce sera l\'URL copiée dans le presse-papier. Écrivez « %s » à la place du nom du fichier.</string>
+    <string name="service_configuration_sftp_urls_title">Noms des fichiers et URLs</string>
+    <string name="service_configuration_sftp_username">Nom d\'utilisateur</string>
+    <string name="services_list_empty_create"></string>
+    <string name="services_sftp_name">SFTP</string>
+</resources>

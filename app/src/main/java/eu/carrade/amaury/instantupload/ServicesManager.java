@@ -22,11 +22,11 @@ public class ServicesManager
 
     public void saveService(Service service)
     {
-
+        services.add(service);
     }
 
     public void deleteService(Service service)
     {
-
+        services.remove(service);
     }
 }

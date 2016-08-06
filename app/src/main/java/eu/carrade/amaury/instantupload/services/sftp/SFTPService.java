@@ -1,14 +1,13 @@
 package eu.carrade.amaury.instantupload.services.sftp;
 
-
-import android.app.Fragment;
-
 import java.io.File;
 
 import eu.carrade.amaury.instantupload.services.Service;
+import eu.carrade.amaury.instantupload.services.ServiceFragment;
 import eu.carrade.amaury.instantupload.services.ServiceType;
 
-public class SFTPService implements Service
+
+public class SFTPService extends Service
 {
     @Override
     public ServiceType getType()
@@ -17,21 +16,9 @@ public class SFTPService implements Service
     }
 
     @Override
-    public String getName()
+    public ServiceFragment getSettingsFragment()
     {
-        return null;
-    }
-
-    @Override
-    public boolean isPrimary()
-    {
-        return false;
-    }
-
-    @Override
-    public Fragment getSettingsFragment()
-    {
-        return null;
+        return new SFTPSettingsFragment();
     }
 
     @Override

@@ -1,0 +1,60 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="eu.carrade.amaury.instantupload.ui.ServiceConfigurationFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top|center">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/service_configuration_name"
+                android:hint="@string/service_configuration_name"
+                android:inputType="textShortMessage|textAutoCorrect|text" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/service_configuration_primary_service"
+                android:id="@+id/service_configuration_primary"
+                android:layout_weight="1"
+                android:layout_gravity="center" />
+
+            <ImageButton
+                android:id="@+id/service_configuration_primary_help_button"
+                android:contentDescription="@string/service_configuration_primary_service_help_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_gravity="center_vertical"
+                android:alpha="0.54"
+                android:background="@drawable/ic_help_black_24dp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/service_configuration_specific_form">
+        </FrameLayout>
+
+    </LinearLayout>
+</FrameLayout>

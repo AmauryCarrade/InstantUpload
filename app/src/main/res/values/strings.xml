@@ -19,4 +19,26 @@
 
     <string name="activity_select_service_type">Select a service to add…</string>
     <string name="select_service_help_text">Pick a service to add. You\'ll be able to configure it on the next screen.</string>
+
+    <string name="activity_add_service">New %s service</string>
+    <string name="service_configuration_name">Service Name</string>
+    <string name="service_configuration_primary_service">Primary service</string>
+    <string name="service_configuration_primary_service_help_label">What is a primary service?</string>
+    <string name="service_add_menu_done">Done</string>
+
+    <string name="service_configuration_sftp_server">Server address</string>
+    <string name="service_configuration_sftp_directory">Upload directory (absolute)</string>
+    <string name="service_configuration_sftp_server_title">SFTP server</string>
+    <string name="service_configuration_sftp_username">Username</string>
+    <string name="service_configuration_sftp_password">Password</string>
+    <string name="service_configuration_sftp_urls_title">Files names and URLs</string>
+    <string name="service_configuration_sftp_filename_format_help">
+        Enter the filename to use while uploading. Leave blank to keep the original filename.\nTap the help icon to learn how to format this.
+    </string>
+    <string name="service_configuration_sftp_filename">File name format</string>
+    <string name="service_configuration_sftp_name_formats_help_label">Learn more about files names formats</string>
+
+    <string name="error_service_name_taken">This name is already taken</string>
+    <string name="service_configuration_sftp_url_help">Type the public URL where the uploaded file will be accessible. This will be the URL copied in the clipboard. Put “%s” instead of the file name.</string>
+    <string name="service_configuration_sftp_url">Public URL</string>
 </resources>

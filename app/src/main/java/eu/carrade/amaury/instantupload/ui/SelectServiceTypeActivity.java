@@ -3,8 +3,8 @@ package eu.carrade.amaury.instantupload.ui;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,25 +54,12 @@ public class SelectServiceTypeActivity extends AppCompatActivity
      */
     public void onServiceTypeSelected(ServiceType type)
     {
-        Toast.makeText(this, type.getName(), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, AddServiceActivity.class);
+        Bundle b = new Bundle();
+        b.putString(AddServiceActivity.SERVICE_TYPE_FIELD, type.name());
+        intent.putExtras(b);
 
-        List<Service> registeredServices = InstantUpload.get().getServicesManager().getServices();
-
-        try
-        {
-            Service service = type.getHandler().newInstance();
-
-            Intent intent = new Intent(this, ConfigureServiceActivity.class);
-
-        }
-        catch (InstantiationException e)
-        {
-            InstantUpload.get().handleError(e);
-        }
-        catch (IllegalAccessException e)
-        {
-            InstantUpload.get().handleError(e);
-        }
+        startActivity(intent);
     }
 
 
