@@ -1,5 +1,6 @@
 package eu.carrade.amaury.instantupload.services;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 
 
@@ -8,6 +9,19 @@ import android.support.v4.app.Fragment;
  */
 public abstract class ServiceFragment extends Fragment
 {
+    protected OnServiceSpecificConfigurationChangeListener listener;
+
+    @Override
+    public void onAttach(Context context)
+    {
+        super.onAttach(context);
+
+        if (context != null && context instanceof OnServiceSpecificConfigurationChangeListener)
+        {
+            listener = (OnServiceSpecificConfigurationChangeListener) context;
+        }
+    }
+
     /**
      * Checks if the form is filed completely.
      *
@@ -28,4 +42,9 @@ public abstract class ServiceFragment extends Fragment
      * @param service The service.
      */
     public abstract void saveToService(Service service);
+
+    public interface OnServiceSpecificConfigurationChangeListener
+    {
+        void onServiceSpecificConfigurationChange();
+    }
 }

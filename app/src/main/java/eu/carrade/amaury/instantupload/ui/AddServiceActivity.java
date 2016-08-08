@@ -16,7 +16,8 @@ import eu.carrade.amaury.instantupload.services.ServiceFragment;
 import eu.carrade.amaury.instantupload.services.ServiceType;
 
 
-public class AddServiceActivity extends AppCompatActivity implements ServiceConfigurationFragment.OnServiceConfigurationChangeListener
+public class AddServiceActivity extends AppCompatActivity
+        implements ServiceConfigurationFragment.OnServiceConfigurationChangeListener, ServiceFragment.OnServiceSpecificConfigurationChangeListener
 {
     /**
      * This activity must be called with a bundle containing this key
@@ -113,6 +114,12 @@ public class AddServiceActivity extends AppCompatActivity implements ServiceConf
 
     @Override
     public void onServiceConfigurationChange()
+    {
+        checkForm();
+    }
+
+    @Override
+    public void onServiceSpecificConfigurationChange()
     {
         checkForm();
     }

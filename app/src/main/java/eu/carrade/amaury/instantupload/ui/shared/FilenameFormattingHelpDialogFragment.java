@@ -15,7 +15,7 @@ import eu.carrade.amaury.instantupload.R;
 
 public class FilenameFormattingHelpDialogFragment extends DialogFragment
 {
-    private static final String SUGGESTED_TEMPLATE = "%r";
+    private static final String SUGGESTED_TEMPLATE = "%r%r";
 
     private FilenameFormattingHelpListener listener = null;
 

@@ -12,12 +12,15 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.HashSet;
 import java.util.Set;
 
 import eu.carrade.amaury.instantupload.InstantUpload;
 import eu.carrade.amaury.instantupload.R;
 import eu.carrade.amaury.instantupload.services.Service;
+import eu.carrade.amaury.instantupload.utils.MaterialUtils;
 import eu.carrade.amaury.instantupload.utils.SimpleTextWatcher;
 
 
@@ -95,9 +98,9 @@ public class ServiceConfigurationFragment extends Fragment implements View.OnFoc
     {
         final View view = inflater.inflate(R.layout.fragment_service_configuration, container, false);
 
-        serviceNameField = (EditText) view.findViewById(R.id.service_configuration_name);
+        serviceNameField       = (EditText) view.findViewById(R.id.service_configuration_name);
         serviceNameFieldLayout = (TextInputLayout) view.findViewById(R.id.service_configuration_name_layout);
-        servicePrimaryField = (CheckBox) view.findViewById(R.id.service_configuration_primary);
+        servicePrimaryField    = (CheckBox) view.findViewById(R.id.service_configuration_primary);
 
         serviceNameField.setText(serviceName);
 
@@ -161,16 +164,12 @@ public class ServiceConfigurationFragment extends Fragment implements View.OnFoc
         final String name = serviceNameField.getText().toString().trim();
         final boolean nameValid = isNameValid(name);
 
-        if (!nameValid && !name.isEmpty())
-        {
-            serviceNameFieldLayout.setError(getString(R.string.error_service_name_taken));
-            serviceNameFieldLayout.setErrorEnabled(true);
-        }
+        MaterialUtils.setInputError(serviceNameFieldLayout, !nameValid && !StringUtils.isBlank(name), getString(R.string.error_service_name_taken));
+
+        if (!nameValid && !StringUtils.isBlank(name))
+            MaterialUtils.setInputError(serviceNameFieldLayout, getString(R.string.error_service_name_taken));
         else
-        {
-            serviceNameFieldLayout.setError(null);
-            serviceNameFieldLayout.setErrorEnabled(false);
-        }
+            MaterialUtils.setInputError(serviceNameFieldLayout, null);
 
         return nameValid;
     }
@@ -207,7 +206,7 @@ public class ServiceConfigurationFragment extends Fragment implements View.OnFoc
             if (name.equals(usedName))
                 return false;
 
-        return !name.isEmpty();
+        return !StringUtils.isBlank(name);
     }
 
     public interface OnServiceConfigurationChangeListener

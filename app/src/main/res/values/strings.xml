@@ -103,4 +103,5 @@
     <string name="dialog_filename_format_table_percent" translatable="false">%%</string>
     <string name="dialog_filename_format_table_percent_desc">Literal percent sign</string>
     <string name="formatter_preview_example_filename">Example Photo.png</string>
+    <string name="error_sftp_public_url_placeholder_missing">The public URL must contains the placeholder \'%s\'</string>
 </resources>
