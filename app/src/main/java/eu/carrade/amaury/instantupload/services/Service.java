@@ -57,7 +57,6 @@ public abstract class Service
 
     public abstract ServiceFragment getSettingsFragment();
 
-    public abstract void openSettings();
     public abstract void saveFile(File file, ServiceCallback callback);
 
 

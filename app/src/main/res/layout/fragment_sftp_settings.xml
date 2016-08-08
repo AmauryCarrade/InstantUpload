@@ -1,138 +1,161 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_gravity="center_horizontal|top"
              tools:context="eu.carrade.amaury.instantupload.services.sftp.SFTPSettingsFragment">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal|top">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/service_configuration_sftp_server_title"
+        style="@style/AppTheme.SubheadForm" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/service_configuration_sftp_server_title"
-            style="@style/AppTheme.SubheadForm" />
+    <android.support.design.widget.TextInputLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent">
-
-            <android.support.design.widget.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/service_configuration_sftp_server"
-                android:hint="@string/service_configuration_sftp_server"
-                android:inputType="textUri|text" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent">
-
-            <android.support.design.widget.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/service_configuration_sftp_username"
-                android:hint="@string/service_configuration_sftp_username"
-                android:inputType="text" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent">
-
-            <android.support.design.widget.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/service_configuration_sftp_password"
-                android:hint="@string/service_configuration_sftp_password"
-                android:inputType="text|textPassword" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent">
-
-            <android.support.design.widget.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/service_configuration_sftp_directory"
-                android:hint="@string/service_configuration_sftp_directory"
-                android:inputType="text|textUri" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/service_configuration_sftp_urls_title"
-            style="@style/AppTheme.SubheadForm" />
-
-        <LinearLayout
-            android:orientation="horizontal"
+        <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/service_configuration_sftp_server"
+            android:hint="@string/service_configuration_sftp_server"
+            android:inputType="textUri|text" />
 
-            <android.support.design.widget.TextInputLayout
-                    android:layout_height="wrap_content"
-                    android:layout_width="0dp"
-                    android:layout_weight="1">
+    </android.support.design.widget.TextInputLayout>
 
-                <android.support.design.widget.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/service_configuration_sftp_filename_format"
-                    android:hint="@string/service_configuration_sftp_filename"
-                    android:inputType="textUri|text"/>
+    <android.support.design.widget.TextInputLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:paddingBottom="16dp"
-                    android:text="@string/service_configuration_sftp_filename_format_help"
-                    />
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/service_configuration_sftp_username"
+            android:hint="@string/service_configuration_sftp_username"
+            android:inputType="text" />
 
-            </android.support.design.widget.TextInputLayout>
+    </android.support.design.widget.TextInputLayout>
 
-            <ImageButton
-                android:id="@+id/service_configuration_filename_format_help_button"
-                android:contentDescription="@string/service_configuration_sftp_name_formats_help_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="6dp"
-                android:layout_marginRight="6dp"
-                android:layout_gravity="center_vertical"
-                android:alpha="0.54"
-                android:background="@drawable/ic_help_black_24dp" />
+    <android.support.design.widget.TextInputLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
 
-        </LinearLayout>
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/service_configuration_sftp_password"
+            android:hint="@string/service_configuration_sftp_password"
+            android:inputType="text|textPassword"
+            android:fontFamily="sans-serif" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/service_configuration_sftp_directory"
+            android:hint="@string/service_configuration_sftp_directory"
+            android:inputType="text|textUri" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/service_configuration_sftp_urls_title"
+        style="@style/AppTheme.SubheadForm" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <android.support.design.widget.TextInputLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1">
 
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/service_configuration_sftp_url"
-                android:hint="@string/service_configuration_sftp_url"
-                android:inputType="text|textUri" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:paddingBottom="16dp"
-                android:text="@string/service_configuration_sftp_url_help"
-                />
+                android:id="@+id/service_configuration_sftp_filename_format"
+                android:hint="@string/service_configuration_sftp_filename"
+                android:inputType="textUri|text"/>
 
         </android.support.design.widget.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/service_configuration_filename_format_help_button"
+            android:contentDescription="@string/service_configuration_sftp_name_formats_help_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_gravity="center_vertical"
+            android:alpha="0.54"
+            android:background="@drawable/ic_help_black_24dp" />
+
     </LinearLayout>
-</FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:paddingBottom="8dp"
+        android:paddingTop="0dp"
+        android:text="@string/service_configuration_sftp_filename_format_help"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/service_configuration_sftp_filename_format_preview_label"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/service_configuration_filename_format_preview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:paddingLeft="4sp"
+            android:paddingRight="4sp"
+            android:paddingEnd="4sp"
+            android:paddingStart="4sp"
+            android:fontFamily="monospace" />
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/service_configuration_sftp_url"
+            android:hint="@string/service_configuration_sftp_url"
+            android:inputType="text|textUri" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:paddingBottom="16dp"
+            android:text="@string/service_configuration_sftp_url_help"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+</LinearLayout>

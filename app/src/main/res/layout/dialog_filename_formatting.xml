@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:paddingTop="@dimen/dialog_margin">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dialog_margin"
+        android:paddingRight="@dimen/dialog_margin"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_filename_format_what"
+            android:layout_gravity="center_horizontal"
+            style="@style/DialogContentText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_filename_format_random"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dialog_paragraph_margin_top"
+            style="@style/DialogContentText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_filename_format_table_intro"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dialog_paragraph_margin_top"
+            android:layout_marginBottom="@dimen/dialog_paragraph_margin_top"
+            style="@style/DialogContentText" />
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_o"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_o_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_O"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_O_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_r"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_r_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_a"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_a_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_A"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_A_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_d"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_d_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_b"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_b_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_B"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_B_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_m"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_m_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_y"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_y_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_Y"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_Y_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_H"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_H_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_I"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_I_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_p"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_p_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_M"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_M_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_S"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_S_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_f"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_f_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_z"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_z_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_Z"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_Z_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_j"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_j_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_U"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_U_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_s"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_s_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+        <View style="@style/Divider.Large" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_percent"
+                style="@style/FilenameFormatting.Placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_filename_format_table_percent_desc"
+                style="@style/DialogContentText" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

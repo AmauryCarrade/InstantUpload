@@ -1,13 +1,16 @@
 package eu.carrade.amaury.instantupload.ui;
 
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -31,6 +34,7 @@ public class ServiceConfigurationFragment extends Fragment implements View.OnFoc
     private Set<String> usedNames = new HashSet<>();
 
     private EditText serviceNameField;
+    private TextInputLayout serviceNameFieldLayout;
     private CheckBox servicePrimaryField;
 
 
@@ -92,6 +96,7 @@ public class ServiceConfigurationFragment extends Fragment implements View.OnFoc
         final View view = inflater.inflate(R.layout.fragment_service_configuration, container, false);
 
         serviceNameField = (EditText) view.findViewById(R.id.service_configuration_name);
+        serviceNameFieldLayout = (TextInputLayout) view.findViewById(R.id.service_configuration_name_layout);
         servicePrimaryField = (CheckBox) view.findViewById(R.id.service_configuration_primary);
 
         serviceNameField.setText(serviceName);
@@ -114,7 +119,26 @@ public class ServiceConfigurationFragment extends Fragment implements View.OnFoc
             }
         });
 
+        ImageButton primaryHelpButton = (ImageButton) view.findViewById(R.id.service_configuration_primary_help_button);
+        primaryHelpButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                displayPrimaryHelp();
+            }
+        });
+
         return view;
+    }
+
+    private void displayPrimaryHelp()
+    {
+        new AlertDialog.Builder(getActivity())
+                .setTitle(R.string.service_configuration_primary_help_dialog_title)
+                .setMessage(R.string.service_configuration_primary_help_dialog_content)
+                .create()
+                .show();
     }
 
     @Override
@@ -138,9 +162,15 @@ public class ServiceConfigurationFragment extends Fragment implements View.OnFoc
         final boolean nameValid = isNameValid(name);
 
         if (!nameValid && !name.isEmpty())
-            serviceNameField.setError(getString(R.string.error_service_name_taken));
+        {
+            serviceNameFieldLayout.setError(getString(R.string.error_service_name_taken));
+            serviceNameFieldLayout.setErrorEnabled(true);
+        }
         else
-            serviceNameField.setError(null);
+        {
+            serviceNameFieldLayout.setError(null);
+            serviceNameFieldLayout.setErrorEnabled(false);
+        }
 
         return nameValid;
     }

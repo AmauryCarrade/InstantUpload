@@ -22,12 +22,6 @@ public class SFTPService extends Service
     }
 
     @Override
-    public void openSettings()
-    {
-
-    }
-
-    @Override
     public void saveFile(File file, ServiceCallback callback)
     {
 
